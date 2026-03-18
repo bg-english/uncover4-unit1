@@ -1043,6 +1043,26 @@ function showGameResult() {
     pct>=.5 ? '📚 Not bad — review the modules and try again.' :
               '💪 Keep studying — you\'ve got this!';
   document.getElementById('gameProgressBar').style.width = '100%';
+  logGame();
+}
+
+function logGame() {
+  if (!APPS_SCRIPT_URL || !currentStudent) return;
+  try {
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: currentStudent.name,
+        email: currentStudent.email,
+        section: currentStudent.section,
+        event: 'game',
+        game: currentGame,
+        score: gameScore + '/' + gameQuestions.length,
+        time: new Date().toISOString()
+      })
+    });
+  } catch(e) {}
 }
 
 function backToGameHub() {
