@@ -705,7 +705,7 @@ function doGet(e) {
 // ═══════════════════════════════════════════════
 //  CONFIGURATION
 // ═══════════════════════════════════════════════
-let APPS_SCRIPT_URL = localStorage.getItem('bf_script_url') || '';
+let APPS_SCRIPT_URL = 'https://script.google.com/a/macros/redboston.edu.co/s/AKfycbxiwiyhoxhmOIJrhPM-pCBpSKKb0XggDrac7xcpOWZqNYrDeQ5arAO1sD2Oh1JTImD1/exec';
 const TEACHER_EMAIL = 'edoardoortiz@redboston.edu.co';
 
 // ═══════════════════════════════════════════════
@@ -923,7 +923,31 @@ const GAME_DATA = {
     { q:'To "reminisce" means:',
       opts:['to forget painful memories','to plan for the future','to talk about happy memories','to regret the past'], ans:2, exp:'"Reminisce" = to talk or think about happy past experiences.' },
     { q:'"Grow up" means:',
-      opts:['to become taller','to develop from child to adult','to learn something new','to move to a new city'], ans:1, exp:'"Grow up" = to develop and mature into an adult.' }
+      opts:['to become taller','to develop from child to adult','to learn something new','to move to a new city'], ans:1, exp:'"Grow up" = to develop and mature into an adult.' },
+    { q:'Definition: "A piece of writing on a particular subject in a newspaper or magazine."',
+      opts:['review','article','report','headline'], ans:1, exp:'"Article" = a written piece published in a newspaper or magazine.' },
+    { q:'Definition: "A title printed in large letters above a story in a newspaper."',
+      opts:['timeline','headline','article','report'], ans:1, exp:'"Headline" = the large title above a newspaper story.' },
+    { q:'Definition: "A person who writes a blog for others to read on the internet."',
+      opts:['reporter','blogger','researcher','reviewer'], ans:1, exp:'"Blogger" = someone who writes a blog on the internet.' },
+    { q:'Definition: "Someone whose job is to discover and describe news events."',
+      opts:['blogger','interviewer','reporter','researcher'], ans:2, exp:'"Reporter" = a journalist who covers news stories.' },
+    { q:'Definition: "A report that gives an opinion about a new book, film, or TV programme."',
+      opts:['article','interview','review','report'], ans:2, exp:'"Review" = an opinion piece about a cultural work.' },
+    { q:'Definition: "A meeting in which someone asks another person questions for media or a job."',
+      opts:['report','interview','review','research'], ans:1, exp:'"Interview" = a formal meeting with questions and answers.' },
+    { q:'Definition: "A detailed study of a subject to discover new information."',
+      opts:['report','article','timeline','research'], ans:3, exp:'"Research" = a systematic investigation into a topic.' },
+    { q:'Definition: "A representation showing the order in which events happened."',
+      opts:['headline','timeline','report','paper'], ans:1, exp:'"Timeline" = a visual sequence of events in order.' },
+    { q:'Definition: "Lack of interest in something or someone."',
+      opts:['disinterest','research','nostalgia','review'], ans:0, exp:'"Disinterest" = absence of interest or curiosity.' },
+    { q:'Which word means the same as "newspaper"?',
+      opts:['article','review','paper','report'], ans:2, exp:'"Paper" is an informal word for a newspaper.' },
+    { q:'Which word describes information about recent events on TV or radio?',
+      opts:['review','news','article','timeline'], ans:1, exp:'"The news" = reports about current events in the media.' },
+    { q:'A journalist writes a detailed description of a situation after considering the facts. This is called a:',
+      opts:['review','article','interview','report'], ans:3, exp:'"Report" = a factual account of a situation or event.' }
   ],
   fillblank: [
     { q:'Complete: "When I was young, I ___ stay up late on weekends." (habit)',
